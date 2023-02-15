@@ -1,16 +1,18 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+
+  <h1>{{title}}</h1>
+  <p>Welcome to {{title}}</p>
+
 
     <header>
-      <nav>
+      <nav id="homepage">
         <ul>
           {{#unless isLoggedIn}}
-            <li><a href='/signup'>Signup</a></li>
-            <li><a href='/login'>Log in</a></li>
+            <a href='/signup'><li>Sign up</li></a>
+            <a href='/login'><li>Log in</li></a>
           {{/unless}}
           {{#if isLoggedIn}}
-            <li><a href='/profile'>Profile</a></li>
-            <li><a href='/logout'>Logout</a></li>
+            <a href='/profile'><li>Profile</li></a>
+            <a href='/logout'><li>Log out</li></a>
           {{/if}}
         </ul>
       </nav>

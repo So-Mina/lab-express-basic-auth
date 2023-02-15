@@ -3,9 +3,10 @@ const User = require('../models/User.model')
 const router = express.Router()
 const bcrypt = require('bcryptjs')
 
-
 router.get('/signup', async (req, res, next) => {
-  res.render('auth/signup')
+  res.render('auth/signup', {
+    title: 'Sign up Page'
+  })
 })
 
 router.post('/signup', async (req, res, next) => {
@@ -39,7 +40,8 @@ router.post('/signup', async (req, res, next) => {
 })
 
 router.get('/login', (req, res, next) => {
-  res.render('auth/login')
+  res.render('auth/login', {
+    title: 'log in Page' } )
 })
 
 router.post('/login', async (req, res, next) => {

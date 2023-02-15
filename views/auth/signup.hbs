@@ -1,23 +1,35 @@
-<h2>Sign up</h2>
+<section class="container">
+  <h2>Sign up</h2>
 
-<form ="/signup" method="post">
+    <hr>
 
-  <div>
-    <label for="username">Username :</label>
-    <input type="text" id="username" name="username" placeholder="Username">
-  </div>
+  <form ="/signup" method="post">
 
-  <div>
-    <label for="password">Password :</label>
-    <input type="password" id="password" name="password" placeholder="Password">
-  </div>
+    <div>
+      <label for="username">Username :</label>
+      <input type="text" id="username" name="username" placeholder="Your cool surname">
+    </div>
 
-  <button>Sign up</button>
+    <div>
+      <label for="password">Password :</label>
+      <input type="password" id="password" name="password" placeholder="Your secret code">
+    </div>
 
-  <p>Already have an account? <a href="/login">Log in</a></p>
+    <button>Sign up</button>
 
+  </form>
+
+  <div class="error-msg">
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
+  </div>
 
-</form>
+    <hr>
+
+  <div>
+    <p>Already one of us ?</p>
+    <a href="/login">Log in</a>   
+  </div>
+
+</section>

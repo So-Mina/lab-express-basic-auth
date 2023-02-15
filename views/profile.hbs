@@ -1,17 +1,17 @@
-    <header>
-      <nav>
-        <ul>
-          <li><a href='/'>Home</a></li>
-          {{#if isLoggedIn}}
-            <li><a href='/main'>Main</a></li>
-            <li><a href='/private'>Private</a></li>
-            <li><a href='/logout'>Logout</a></li>
-          {{/if}}
-        </ul>
-      </nav>
-    </header>
+<header class="profile-header">
+  <nav>
+    <ul>
+      <a href='/'><li>Home</li></a>
+      {{#if isLoggedIn}}
+        <a href='/main'><li>Main</li></a>
+        <a href='/private'><li>Private</li></a>
+        <a href='/logout'><li>Log out</li></a>
+      {{/if}}
+    </ul>
+  </nav>
+</header>
 
-<h1>Profile of {{currentUser.username}}</h1>
+<h1>✨ {{currentUser.username}}'s profile.</h1>
 
 
 
